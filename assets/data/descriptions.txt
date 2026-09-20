@@ -1,0 +1,15 @@
+================================================================================
+PORTFOLIO PREPARED DISH DESCRIPTIONS (ASSIGNMENT III)
+================================================================================
+
+1. Warm Microwaved Campbell's Tomato Soup Bowl (assets/images/canned-tomato-soup.jpg)
+Description: Rich, creamy condensed tomato soup prepared to piping-hot perfection in the microwave, garnished with fresh herbs and served in a ceramic bowl beside the classic tin can.
+
+2. Sizzling Pan-Seared Beef Breakfast Sausages (assets/images/sausages-pack.jpg)
+Description: Juicy 100% beef breakfast sausage links seared on a medium-high stovetop skillet until crisp and golden-brown, plated fresh with herbs beside the retail box.
+
+3. Golden Sunny-Side Farm Eggs (assets/images/egg-carton-pack.jpg)
+Description: Fresh farm eggs fried in a sizzling skillet with crispy edges and rich golden runny yolks, seasoned with cracked pepper and fresh herbs beside the 24-egg carton.
+
+4. Steamed Rainbow Mixed Vegetables Bowl (assets/images/mixed-vegetables.jpg)
+Description: A colorful bowl of sweet corn, tender green peas, diced carrots, and cut green beans, freshly boiled in hot water and finished with a buttery glaze beside the pouch.

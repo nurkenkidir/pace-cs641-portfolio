@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="chili">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurken | The Best Chef in the East</title>
+  <meta name="description" content="Official portfolio of Nurken, culinary specialist in high-efficiency microwave reheating and external logistics, electric kettle hydration for Nongshim ramen and canned goods, and stovetop boiling of sausages, spaghetti, and vegetables." />
+  <meta name="author" content="Nurken" />
+
+  <!-- Purely Local Native System Fonts (100% Offline & Local) -->
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       HEADER & CONTROLS
+       ========================================================================= -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#hero" class="header__brand">
+        <div class="header__avatar" aria-hidden="true">👨‍🍳</div>
+        <div class="header__brand-text">
+          <span class="header__name">Nurken <span class="header__name-tag">| The Best Chef in the East</span></span>
+          <span class="header__role">3-star michelin microwave master</span>
+        </div>
+      </a>
+
+      <div class="header__controls">
+        <!-- Palette Accent Color Switcher -->
+        <div class="palette-picker" title="Switch Accent Color" role="radiogroup" aria-label="Accent Color Picker">
+          <button class="palette-picker__btn palette-picker__btn--active" data-accent-value="chili" title="Shin Chili Red" aria-label="Shin Chili Red Accent"></button>
+          <button class="palette-picker__btn" data-accent-value="amber" title="Egg Yolk Amber" aria-label="Egg Yolk Amber Accent"></button>
+          <button class="palette-picker__btn" data-accent-value="emerald" title="Matcha Emerald" aria-label="Matcha Emerald Accent"></button>
+          <button class="palette-picker__btn" data-accent-value="cyan" title="Cyber Cyan" aria-label="Cyber Cyan Accent"></button>
+          <button class="palette-picker__btn" data-accent-value="violet" title="Neon Violet" aria-label="Neon Violet Accent"></button>
+        </div>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <span id="themeIcon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION
+         ========================================================================= -->
+    <section id="hero" class="hero">
+      <div class="container hero__container">
+        <div class="hero__academic-badge" role="status">
+          <span class="hero__academic-icon" aria-hidden="true">🎓</span>
+          <span>Academic Project • Generated using AI for Educational Purposes</span>
+        </div>
+
+        <h1 class="hero__title">
+          Culinary Masterpieces from <span class="hero__title-accent">The Best Chef in the East</span>.
+        </h1>
+
+        <p class="hero__lead">
+          Culinary practitioner with demonstrated experience across high-efficiency microwave operations and external care-package logistics, electric kettle hydration protocols for Nongshim ramen and canned provisions, and advanced stovetop multi-pot boiling for sausages, spaghetti, and mixed vegetables.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+            View Signature Dishes
+          </a>
+          <a href="#stack" class="btn btn--secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            My Kitchen Skills
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PROJECTS SECTION (Responsive Multi-Column Grid)
+         ========================================================================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-head__badge">Signature Repertoire</span>
+          <h2 class="section-head__title">Dishes I Can Make</h2>
+          <p class="section-head__desc">
+            An elite collection of culinary preparations engineered with precision timing, official packaging assets, and zero runtime pan sticking.
+          </p>
+        </header>
+
+        <!-- Multi-column grid on desktop, single column on mobile -->
+        <div id="projectsGrid" class="projects-grid">
+          <!-- Populated dynamically via JS from projects.json with static fallback -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         COOKING STACK / SKILLS SECTION
+         ========================================================================= -->
+    <section id="stack" class="section">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-head__badge">Skills & Tools</span>
+          <h2 class="section-head__title">What I Know</h2>
+          <p class="section-head__desc">
+            The core appliances, hardware, and pre-packaged seasoning know-how in my arsenal.
+          </p>
+        </header>
+
+        <div class="stack-grid">
+          <div class="stack-card">
+            <div class="stack-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="15" x="2" y="4" rx="2"/>
+                <path d="M6 8h8v7H6z"/>
+                <circle cx="18" cy="9" r="1"/>
+                <circle cx="18" cy="14" r="1"/>
+              </svg>
+            </div>
+            <h3 class="stack-card__title">Microwave</h3>
+            <p class="stack-card__desc">Flawless 1-button reheat operation for Campbell's soup cans, sausage thawing, and rapid mug heating.</p>
+            <span class="stack-card__meta">Core Skill • 1000W Master</span>
+          </div>
+
+          <div class="stack-card">
+            <div class="stack-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="stack-card__title">Skillet</h3>
+            <p class="stack-card__desc">Medium-high stovetop searing for breakfast sausages and frying fresh eggs to golden perfection.</p>
+            <span class="stack-card__meta">Hardware • Sizzle Layer</span>
+          </div>
+
+          <div class="stack-card">
+            <div class="stack-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                <line x1="6" x2="6" y1="2" y2="4"/>
+                <line x1="10" x2="10" y1="2" y2="4"/>
+                <line x1="14" x2="14" y1="2" y2="4"/>
+              </svg>
+            </div>
+            <h3 class="stack-card__title">Kettle</h3>
+            <p class="stack-card__desc">Instant rapid boiling water delivery system for blanching frozen mixed vegetables and brewing hot drinks.</p>
+            <span class="stack-card__meta">Hydration Engine • 100°C</span>
+          </div>
+
+          <div class="stack-card">
+            <div class="stack-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"/>
+                <path d="M4 10h16"/>
+                <path d="M9 6v2"/>
+                <path d="M9 14v4"/>
+              </svg>
+            </div>
+            <h3 class="stack-card__title">Refrigerator</h3>
+            <p class="stack-card__desc">Essential cold storage preservation unit maintaining peak freshness for bulk egg flats and opened soup cans.</p>
+            <span class="stack-card__meta">Cold Storage • 37°F</span>
+          </div>
+
+          <div class="stack-card">
+            <div class="stack-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m4.93 4.93 4.24 4.24"/>
+                <path d="m14.83 9.17 4.24-4.24"/>
+                <path d="m14.83 14.83 4.24 4.24"/>
+                <path d="m9.17 14.83-4.24 4.24"/>
+              </svg>
+            </div>
+            <h3 class="stack-card__title">Seasoning (Pre-Packed Packet)</h3>
+            <p class="stack-card__desc">Tearing open factory pre-measured seasoning and spice blends with surgical precision.</p>
+            <span class="stack-card__meta">Secret Recipe Protocol</span>
+          </div>
+
+          <div class="stack-card">
+            <div class="stack-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="stack-card__title">Can Opener</h3>
+            <p class="stack-card__desc">High-torque manual rotational tool for unlocking Campbell's Condensed Tomato Soup cans.</p>
+            <span class="stack-card__meta">Hardware Access Tool</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         KITCHEN CHANGELOG / TIMELINE
+         ========================================================================= -->
+    <section id="experience" class="section">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <span class="section-head__badge">Career Timeline</span>
+          <h2 class="section-head__title">Culinary Journey</h2>
+          <p class="section-head__desc">
+            The legendary three-stage evolution of the East's most resourceful chef.
+          </p>
+        </header>
+
+        <div class="timeline">
+          <!-- Era 3: Stovetop Boiling Mastery -->
+          <div class="timeline-item">
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__header">
+              <h3 class="timeline-item__role">Chief Boiling Officer: Sausages, Spaghetti & Veggies</h3>
+              <span class="timeline-item__company">@ Stovetop Boiling Division</span>
+              <span class="timeline-item__period">2024 — Present</span>
+            </div>
+            <p class="timeline-item__desc">
+              Achieved domestic culinary independence by graduating to full stovetop multi-pot boiling. Engineered flawless boiling protocols for plunging sausages into bubbling cauldrons, timing spaghetti pasta al dente, and dropping frozen mixed vegetables directly into rolling boils for maximum nutrition and zero dishwashing overhead.
+            </p>
+          </div>
+
+          <!-- Era 2: Nongshim & Canned Food Era -->
+          <div class="timeline-item">
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__header">
+              <h3 class="timeline-item__role">Senior Nongshim Ramen & Canned Goods Technician</h3>
+              <span class="timeline-item__company">@ Electric Kettle & Pantry Station</span>
+              <span class="timeline-item__period">2022 — 2024</span>
+            </div>
+            <p class="timeline-item__desc">
+              Pioneered high-velocity noodle hydration utilizing 100°C electric kettles and gourmet Nongshim Shin Ramyun seasoning packets. Unlocked shelf-stable culinary security with heavy can opener deployments, feasting on canned meats, hearty soups, and high-sodium pantry staples.
+            </p>
+          </div>
+
+          <!-- Era 1: Microwave & Kinship Care Packages -->
+          <div class="timeline-item">
+            <div class="timeline-item__dot" aria-hidden="true"></div>
+            <div class="timeline-item__header">
+              <h3 class="timeline-item__role">Microwave Operative & Kinship Supply-Chain Dependent</h3>
+              <span class="timeline-item__company">@ External Care Package Logistics HQ</span>
+              <span class="timeline-item__period">2020 — 2022</span>
+            </div>
+            <p class="timeline-item__desc">
+              Spearheaded baseline survival exclusively through 1000W electromagnetic wave radiation and heavy reliance on emergency shipments from relatives. Executed strategic unboxing of frozen home-cooked care packages, mastering the delicate science of 3-minute reheat cycles while strictly avoiding stovetop interaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Educational Disclaimer & Copyright)
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__notice">
+        🎓 <strong>Educational Notice:</strong> This portfolio was generated using AI for educational and demonstration purposes as part of Mobile Web Development (Pace University). All culinary accolades, Michelin ratings, and dish histories are humorous fictional creations.
+      </p>
+      <p class="footer__copy">© 2026 Nurken. Built for educational demonstration • Generated using AI.</p>
+    </div>
+  </footer>
+
+  <!-- Local Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

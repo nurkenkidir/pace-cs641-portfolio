@@ -1,0 +1,136 @@
+/* ==========================================================================
+   THEME DESIGN TOKENS & VARIABLES
+   ========================================================================== */
+
+:root {
+  /* Accent Color Options (Default: Shin Chili Red) */
+  --accent-primary: #ff4757;
+  --accent-primary-hover: #e03040;
+  --accent-glow: rgba(255, 71, 87, 0.28);
+  --accent-subtle: rgba(255, 71, 87, 0.12);
+  --accent-border: rgba(255, 71, 87, 0.35);
+
+  /* Typography (Native System Fonts for 100% Local Performance) */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+
+  /* Common Spacing & Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 160ms ease;
+  --transition-normal: 220ms ease;
+
+  /* Layout Widths */
+  --max-width-content: 1180px;
+  --max-width-narrow: 840px;
+  --header-height: 72px;
+}
+
+/* --------------------------------------------------------------------------
+   DARK THEME (Default)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+  color-scheme: dark;
+  --bg-main: #090c10;
+  --bg-surface: #0f141c;
+  --bg-surface-elevated: #161c28;
+  --bg-surface-glass: rgba(15, 20, 28, 0.82);
+  --bg-overlay: rgba(9, 12, 16, 0.88);
+
+  --text-primary: #f0f6fc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-on-accent: #ffffff;
+
+  --border-color: rgba(255, 255, 255, 0.09);
+  --border-color-hover: rgba(255, 255, 255, 0.18);
+  --border-highlight: rgba(255, 255, 255, 0.25);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px var(--accent-glow);
+
+  --badge-bg: rgba(255, 255, 255, 0.06);
+  --badge-text: #cbd5e1;
+  --code-bg: #121824;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT THEME
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-main: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1f5f9;
+  --bg-surface-glass: rgba(255, 255, 255, 0.88);
+  --bg-overlay: rgba(248, 250, 252, 0.92);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-on-accent: #ffffff;
+
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-color-hover: rgba(15, 23, 42, 0.22);
+  --border-highlight: rgba(15, 23, 42, 0.32);
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 20px var(--accent-glow);
+
+  --badge-bg: rgba(15, 23, 42, 0.06);
+  --badge-text: #1e293b;
+  --code-bg: #e2e8f0;
+}
+
+/* --------------------------------------------------------------------------
+   COLOR PRESET OVERRIDES
+   -------------------------------------------------------------------------- */
+[data-accent="chili"] {
+  --accent-primary: #ff4757;
+  --accent-primary-hover: #e03040;
+  --accent-glow: rgba(255, 71, 87, 0.3);
+  --accent-subtle: rgba(255, 71, 87, 0.12);
+  --accent-border: rgba(255, 71, 87, 0.35);
+}
+
+[data-accent="amber"] {
+  --accent-primary: #f59e0b;
+  --accent-primary-hover: #d97706;
+  --accent-glow: rgba(245, 158, 11, 0.3);
+  --accent-subtle: rgba(245, 158, 11, 0.12);
+  --accent-border: rgba(245, 158, 11, 0.35);
+}
+
+[data-accent="emerald"] {
+  --accent-primary: #10b981;
+  --accent-primary-hover: #059669;
+  --accent-glow: rgba(16, 185, 129, 0.3);
+  --accent-subtle: rgba(16, 185, 129, 0.12);
+  --accent-border: rgba(16, 185, 129, 0.35);
+}
+
+[data-accent="cyan"] {
+  --accent-primary: #06b6d4;
+  --accent-primary-hover: #0891b2;
+  --accent-glow: rgba(6, 182, 212, 0.3);
+  --accent-subtle: rgba(6, 182, 212, 0.12);
+  --accent-border: rgba(6, 182, 212, 0.35);
+}
+
+[data-accent="violet"] {
+  --accent-primary: #8b5cf6;
+  --accent-primary-hover: #7c3aed;
+  --accent-glow: rgba(139, 92, 246, 0.3);
+  --accent-subtle: rgba(139, 92, 246, 0.12);
+  --accent-border: rgba(139, 92, 246, 0.35);
+}

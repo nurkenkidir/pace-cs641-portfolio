@@ -1,0 +1,54 @@
+[
+  {
+    "id": "canned-tomato-soup",
+    "title": "Warm Microwaved Campbell's Tomato Soup Bowl",
+    "version": "v5.0-steaming-bowl",
+    "category": "Microwave Prepared",
+    "image": "assets/images/canned-tomato-soup.jpg",
+    "alt": "AI-generated cooked bowl of steaming creamy Campbell's tomato soup next to the metal can",
+    "description": "Rich, creamy condensed tomato soup prepared to piping-hot perfection in the microwave, garnished with fresh herbs and served in a ceramic bowl beside the classic tin can.",
+    "cookTime": "3 mins",
+    "complexity": "Microwave & Garnish",
+    "heatLevel": "Warm & Creamy",
+    "tags": ["Campbell's", "Steaming Soup", "Microwave Cooked", "AI-Generated Visual"]
+  },
+  {
+    "id": "sausages-pack",
+    "title": "Sizzling Pan-Seared Beef Breakfast Sausages",
+    "version": "v2.4-crisp-seared",
+    "category": "Skillet Seared",
+    "image": "assets/images/sausages-pack.jpg",
+    "alt": "AI-generated plate of sizzling golden-brown 100% beef breakfast sausages next to the Brown 'N Serve box",
+    "description": "Juicy 100% beef breakfast sausage links seared on a medium-high stovetop skillet until crisp and golden-brown, plated fresh with herbs beside the retail box.",
+    "cookTime": "6 mins",
+    "complexity": "Skillet Sear & Flip",
+    "heatLevel": "Savory Herbs",
+    "tags": ["100% Beef", "Skillet Seared", "Sizzling Plate", "AI-Generated Visual"]
+  },
+  {
+    "id": "egg-carton-pack",
+    "title": "Golden Sunny-Side Farm Eggs",
+    "version": "v2.0-sunny-platter",
+    "category": "Skillet Fried",
+    "image": "assets/images/egg-carton-pack.jpg",
+    "alt": "AI-generated plate of freshly cooked sunny-side-up fried eggs with golden yolks next to a 24-egg carton",
+    "description": "Fresh farm eggs fried in a sizzling skillet with crispy edges and rich golden runny yolks, seasoned with cracked pepper and fresh herbs beside the 24-egg carton.",
+    "cookTime": "4 mins",
+    "complexity": "Crack & Fry",
+    "heatLevel": "Fresh & Golden",
+    "tags": ["Sunny-Side", "Fresh Farm Eggs", "Pan Fried", "AI-Generated Visual"]
+  },
+  {
+    "id": "mixed-vegetables",
+    "title": "Steamed Rainbow Mixed Vegetables Bowl",
+    "version": "v1.4-blanched-fresh",
+    "category": "Boiled & Steamed",
+    "image": "assets/images/mixed-vegetables.jpg",
+    "alt": "AI-generated steaming bowl of freshly boiled mixed vegetables next to the Steamfresh bag",
+    "description": "A colorful bowl of sweet corn, tender green peas, diced carrots, and cut green beans, freshly boiled in hot water and finished with a buttery glaze beside the pouch.",
+    "cookTime": "4 mins",
+    "complexity": "Boil & Glaze",
+    "heatLevel": "Steamed Fresh",
+    "tags": ["Steamed Bowl", "Boiled Veggies", "Corn & Peas", "AI-Generated Visual"]
+  }
+]
