@@ -63,6 +63,7 @@ const FALLBACK_PROJECTS = [
 document.addEventListener("DOMContentLoaded", () => {
   initThemeManager();
   initAccentPicker();
+  initMobileMenu();
   initProjectsRenderer();
 });
 
@@ -71,49 +72,68 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 function initThemeManager() {
   const themeToggleBtn = document.getElementById("themeToggleBtn");
+  const mobileThemeToggleBtn = document.getElementById("mobileThemeToggleBtn");
   const storedTheme = localStorage.getItem("culinary-theme");
   const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   
   const initialTheme = storedTheme || (systemPrefersDark ? "dark" : "light");
   applyTheme(initialTheme);
 
+  const handleToggle = () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem("culinary-theme", nextTheme);
+  };
+
   if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
-      const nextTheme = currentTheme === "dark" ? "light" : "dark";
-      applyTheme(nextTheme);
-      localStorage.setItem("culinary-theme", nextTheme);
-    });
+    themeToggleBtn.addEventListener("click", handleToggle);
+  }
+
+  if (mobileThemeToggleBtn) {
+    mobileThemeToggleBtn.addEventListener("click", handleToggle);
   }
 }
 
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
+  const isDark = theme === "dark";
+
+  const moonIconSvg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    </svg>
+  `;
+
+  const sunIconSvg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2"/>
+      <path d="M12 20v2"/>
+      <path d="m4.93 4.93 1.41 1.41"/>
+      <path d="m17.66 17.66 1.41 1.41"/>
+      <path d="M2 12h2"/>
+      <path d="M20 12h2"/>
+      <path d="m6.34 17.66-1.41 1.41"/>
+      <path d="m19.07 4.93-1.41 1.41"/>
+    </svg>
+  `;
+
+  // Desktop icon
   const themeIconContainer = document.getElementById("themeIcon");
   if (themeIconContainer) {
-    if (theme === "dark") {
-      // Moon icon
-      themeIconContainer.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-        </svg>
-      `;
-    } else {
-      // Sun icon
-      themeIconContainer.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2"/>
-          <path d="M12 20v2"/>
-          <path d="m4.93 4.93 1.41 1.41"/>
-          <path d="m17.66 17.66 1.41 1.41"/>
-          <path d="M2 12h2"/>
-          <path d="M20 12h2"/>
-          <path d="m6.34 17.66-1.41 1.41"/>
-          <path d="m19.07 4.93-1.41 1.41"/>
-        </svg>
-      `;
-    }
+    themeIconContainer.innerHTML = isDark ? moonIconSvg : sunIconSvg;
+  }
+
+  // Mobile icon & label
+  const mobileThemeIconContainer = document.getElementById("mobileThemeIcon");
+  if (mobileThemeIconContainer) {
+    mobileThemeIconContainer.innerHTML = isDark ? moonIconSvg : sunIconSvg;
+  }
+
+  const mobileThemeText = document.getElementById("mobileThemeText");
+  if (mobileThemeText) {
+    mobileThemeText.textContent = isDark ? "Dark Mode" : "Light Mode";
   }
 }
 
@@ -144,6 +164,67 @@ function applyAccent(accent) {
       btn.classList.add("palette-picker__btn--active");
     } else {
       btn.classList.remove("palette-picker__btn--active");
+    }
+  });
+}
+
+/**
+ * 3. MOBILE DROPDOWN POPUP MENU
+ */
+function initMobileMenu() {
+  const burgerBtn = document.getElementById("burgerBtn");
+  const mobilePopup = document.getElementById("mobilePopup");
+  if (!burgerBtn || !mobilePopup) return;
+
+  const toggleMenu = (open) => {
+    const shouldOpen = open !== undefined ? open : !mobilePopup.classList.contains("is-open");
+    if (shouldOpen) {
+      mobilePopup.classList.add("is-open");
+      mobilePopup.setAttribute("aria-hidden", "false");
+      burgerBtn.classList.add("is-active");
+      burgerBtn.setAttribute("aria-expanded", "true");
+    } else {
+      mobilePopup.classList.remove("is-open");
+      mobilePopup.setAttribute("aria-hidden", "true");
+      burgerBtn.classList.remove("is-active");
+      burgerBtn.setAttribute("aria-expanded", "false");
+    }
+  };
+
+  burgerBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close when clicking outside of burger or popup
+  document.addEventListener("click", (e) => {
+    if (mobilePopup.classList.contains("is-open")) {
+      if (!mobilePopup.contains(e.target) && !burgerBtn.contains(e.target)) {
+        toggleMenu(false);
+      }
+    }
+  });
+
+  // Close on Escape key press
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobilePopup.classList.contains("is-open")) {
+      toggleMenu(false);
+      burgerBtn.focus();
+    }
+  });
+
+  // Close when clicking any nav link inside mobile popup
+  const mobileNavLinks = mobilePopup.querySelectorAll(".mobile-nav__link");
+  mobileNavLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      toggleMenu(false);
+    });
+  });
+
+  // Automatically close if screen resized back to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && mobilePopup.classList.contains("is-open")) {
+      toggleMenu(false);
     }
   });
 }
